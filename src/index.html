@@ -3,16 +3,817 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Краткое описание страницы"/>
-    <title>Сайт</title>
+    
+    <title>РосБрокер</title>
+    <meta name="description" content="РосБрокер - "/>
     <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
-    <link rel="stylesheet" href="assets/css/main.min.css">     
-    <link rel="stylesheet" href="assets/css/font-awesome.min.css">    
+    <link rel="stylesheet" href="assets/css/main.min.css">  
+    <link rel="stylesheet" href="assets/css/swiper.min.css">            
+    <link rel="stylesheet" href="assets/css/aos.min.css"> 
     
 </head>
 <body>
-    
-    
+    <header class="section header">
+        <div class="section__inner">
+            <a href="#" class="logo">РосБрокер</a>
+
+            <nav class="header-nav">
+                <ul>
+                    <li><a href="#about" class="d-menu__link">О нас</a></li>
+                    <li><a href="#advantages" class="d-menu__link">Преимущества</a></li>
+                    <li><a href="#banks" class="d-menu__link">Банки</a></li>
+                    <li><i class="icon-mail-alt"></i><a href="mailto:info@rusbrocker.ru">info@rusbrocker.ru</a></li>
+                </ul>
+            </nav>
+
+
+            <div class="header-contacts">
+                <div class="header-phone"><i class="icon-phone" aria-hidden="true"></i><a href="tel:+74950035519">+ 7 495 003 55 19</a></div>
+                <button class="header-call-me">Перезвоните мне</button>
+            </div>
+
+
+            <div class="hamburger">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="section s-hero">
+            <div class="s-hero__decoration-1" data-aos="fade-right" data-aos-duration="1500" data-aos-once="true"></div>
+            <div class="s-hero__decoration-2" data-aos="fade-left" data-aos-duration="2000" data-aos-once="true"></div>
+            <div class="s-hero__decoration-3" data-aos="fade-up" data-aos-duration="2000" data-aos-once="true" data-aos-offset="-100">
+                <img src="assets/img/page-decoration.png" alt="">
+            </div>
+            <div class="section__inner">
+                <div class="s-hero__tblock">
+                    <div class="tblock-decoration-1"  data-aos="fade-up-right" data-aos-duration="2500" data-aos-once="true">
+                        <img src="assets/img/title-page-decoration.png" alt="">
+                    </div>
+                    <div class="tblock-decoration-2" data-aos="fade-down-right" data-aos-duration="2500" data-aos-once="true">
+                        <img src="assets/img/title-page-decoration-2.png" alt="">
+                    </div>
+
+                    
+                    <h1 class="hero-title">
+                        Оформите банковскую гарантию  и получите <br><span>кэшбэк 10%</span>
+                    </h1>
+                    <a class="h-detail d-menu__link" href="#about">Подробнее</a>
+                    <button class="h-calc-now">Расчитать сейчас</button>
+                </div>
+                <div class="s-hero__form" >
+
+                    <div class="h-form-decoration"></div>
+                    <div class="h-form-decoration-2"  data-aos="fade-up-right" data-aos-duration="2500" data-aos-once="true" data-aos-offset="-200">
+                        <img src="assets/img/page-decoration-2.png" alt="">
+                    </div>
+
+                    <h3>Узнайте стоимость банковской гарантии <br />
+                        прямо сейчас!</h3>
+
+
+                    <form action="post" name="calcform" class="calcform calcform-d" >
+                        <div class="calcform__item">
+                            <div class="calcform__outer-i-wrap">
+                                <label for="cf-name" class="calcform__label">Имя</label>
+                                <div class="calcform__inner-i-wrap">
+                                    <input type="text" placeholder="Имя" name="name" id="cf-name" class="calcform__input" required>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="calcform__item">
+                            <div class="calcform__outer-i-wrap">
+                                <label for="cf-phone" class="calcform__label">Телефон</label>
+                                <div class="calcform__inner-i-wrap">
+                                    <input type="tel" placeholder="Телефон" name="phone" id="cf-phone" class="calcform__input" required>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="calcform__item">
+                            <div class="calcform__outer-i-wrap">
+                                <label for="cf-email" class="calcform__label">Электронная почта</label>
+                                <div class="calcform__inner-i-wrap">
+                                    <input type="email" placeholder="Электронная почта" name="email" id="cf-email" class="calcform__input" required>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="calcform__item">
+                            <div class="calcform__outer-i-wrap">
+                                <label for="cf-guarantee" class="calcform__label">Вид банковской гарантии</label>
+                                <div class="calcform__inner-i-wrap">
+                                    <select name="cf-guarantee" id="cf-guarantee" class="calcform__input" required>
+                                        <option value=""></option>
+                                        <option value="Гарантия 1">Гарантия 1</option>
+                                        <option value="Гарантия 2">Гарантия 2</option>
+                                        <option value="Гарантия 3">Гарантия 3</option>
+                                        <option value="Гарантия 4">Гарантия 4</option>
+
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="calcform__item">
+                            <div class="calcform__outer-i-wrap">
+                                <label for="cf-contract" class="calcform__label">Вид контракта</label>
+                                <div class="calcform__inner-i-wrap">
+                                    <select name="cf-contract" id="cf-contract" class="calcform__input" required>
+                                        <option value=""></option>
+                                        <option value="Вид контракта 1">Вид контракта 1</option>
+                                        <option value="Вид контракта 2">Вид контракта 2</option>
+                                        <option value="Вид контракта 3">Вид контракта 3</option>
+                                        <option value="Вид контракта 4">Вид контракта 4</option>
+
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="calcform__item">
+                            <div class="calcform__outer-i-wrap">
+                                <label for="cf-date" class="calcform__label">Срок гарантии</label>
+                                <div class="calcform__inner-i-wrap">
+                                    <input type="date" placeholder="Срок гарантии" name="cf-date" id="cf-date" class="calcform__input" required>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="calcform__row">
+                            <div class="calcform__outer-i-wrap">
+                                <label for="cf-summ" class="calcform__label">Сумма</label>
+                                <div class="calcform__inner-i-wrap">
+                                    <input type="text" placeholder="Сумма" name="cf-summ" id="cf-summ" class="calcform__input" required>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="calcform__row">
+                            <button class="calcform__btn send-for-calc">Расcчитать</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!--advantages: Адаптирован-->
+        <section class="section advantages" id="advantages">
+            <div class="section__inner">
+                <h2 class="title">Наши преимущества</h2>
+
+                <div class="adv-list">
+                    <div class="adv-list__item" data-aos="fade-up" data-aos-duration="1600" data-aos-once="true">
+                        Получение банковской гарантии 
+                        за 1 день. Принятие решения 
+                        от 15 минут. 
+                    </div>
+
+                    <div class="adv-list__item" data-aos="fade-up" data-aos-duration="1800" data-aos-once="true">
+                        Совершенно бесплатно, 
+                        только комиссия в банк.  
+                    </div>
+                    <div class="adv-list__item" data-aos="fade-up" data-aos-duration="2000" data-aos-once="true">
+                        Без поручительств, посещения 
+                        банка и залогов
+                    </div>
+                    <div class="adv-list__item" data-aos="fade-up" data-aos-duration="2200" data-aos-once="true">
+                        Ставка банка от 1,5 % годовых.
+                    </div>
+                    <div class="adv-list__item" data-aos="fade-up" data-aos-duration="2400" data-aos-once="true">
+                        Сумма банковской гарантии 
+                        от 100 000 руб. до 5 000 000 000 руб. 
+                    </div>
+                    <div class="adv-list__item" data-aos="fade-up" data-aos-duration="2600" data-aos-once="true">
+                        44 ФЗ, 223 ФЗ, 615-ПП, ФЗ-185 
+                        и коммерческие контракты. 
+                    </div>
+                </div>
+
+            </div>
+        </section>
+        <!--advantages: Адаптирован-->
+
+
+        <!--s-about: Адаптирован-->
+        <section class="section s-about" id="about">
+            <div class="section__inner">
+                <div class="about-block">
+                    <div class="about-img-block" data-aos="fade-right" data-aos-duration="1600" data-aos-once="true">
+                        <div class="about-img">
+                            <img src="assets/img/feedback-img.png" alt="">
+
+                            <div class="about-person">
+                                <p class="about-person__name">Анастасия</p>
+                                <p class="about-person__post">Основатель РосБрокер</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="about-text-block" data-aos="fade-left" data-aos-duration="1600" data-aos-once="true">
+                        <h2 class="title">О нас</h2>
+
+
+                        <div class="about-t-content">
+
+                        
+                            <p class="text">Компания РосБрокер работает с 2018 года. Мы выдали более 1000 гарантий и хорошо знаем требования банков. Проведём точный анализ компании и сделаем оптимальный подбор банка, учитывая опыт и финансовое положение компании.</p>
+                            
+                            <div class="comment">
+                                <div class="comment__icon">
+                                    <img src="assets/img/icons/about/dialog.png" alt="">
+                                </div>
+                                <div class="comment__text-block">
+                                    <p class="comment__title">Не уверены в своих силах или уже получили отказ?</p>
+                                    <p class="comment__text">Мы поможем быстро получить одобрение даже в самых нестандартных ситуациях! </p>
+                                </div>
+                            </div>
+                        </div>
+                        <button class= "guarantees-btn">Получить гарантии</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--s-about: Адаптирован-->
+
+        <!--s-we-help: Адаптирован-->
+        <section class="section s-we-help">
+            <div class="section__inner">
+                <h2 class="title">Мы <span>точно поможем</span></h2>
+
+                <div class="h-target" data-aos="fade-right" data-aos-duration="2000" data-aos-once="true">
+                    <div class="h-target__img">
+                        <img src="assets/img/icons/for-bisness.png">
+                    </div>
+                    <div class="h-target__text-block">
+                        <h3 class="h-target__title">Предпринимателям</h3>
+                        <p class="h-target__text text">Предпринимателям, которые никогда не сталкивались с банковскими гарантиями, не умеют опыт в оформлении или впервые
+                            участвуют  в государственных торгах.  Подскажем, какие документы предоставить, заполним анкеты и подадим их в банки, 
+                            оптимально подходящие под ситуацию клиента; </p>
+                    </div>
+                </div>
+
+                <div class="h-target" data-aos="fade-left" data-aos-duration="2200" data-aos-once="true">
+                    <div class="h-target__img">
+                        <img src="assets/img/icons/for-clients.png">
+                    </div>
+                    <div class="h-target__text-block">
+                        <h3 class="h-target__title">Клиентам</h3>
+                        <p class="h-target__text text">Клиентам, которые получили отказ в нескольких банках и срочно ищут решение проблемы. Мы тщательно проанализируем причины отказов, обойдем стоп факторы, найдем выход из ситуации. </p>
+                    </div>
+                </div>
+
+                <div class="get-guarantees">
+                    <button class="get-guarantees__btn">Получить Консультацию</button>
+                </div>
+                
+            </div>
+        </section>
+        <!--s-we-help: Адаптирован-->
+        <!--s-why: Адаптирован-->
+        <section class="section s-why">
+            <div class="section__inner">
+                <h2 class="title"><span>Почему</span> мы?</h2>
+
+                <div class="why-args">
+                    <div class="why-argument" data-aos="fade-up" data-aos-duration="1600" data-aos-once="true">
+                        <div class="why-argument__icon">
+                            <img src="assets/img/icons/why/1.png" alt="">
+                        </div>
+                        <div class="why-argument__text-block">
+                            <h3 class="why-argument__title">Работаем быстро</h3>
+                            <p class="why-argument__text text">Сразу же вникаем в курс дела, 
+                                не тянем кота за хвост, помогаем оформить необходимые документы. Как правило, для получения банковской гарантии достаточно 
+                                1 дня. </p>
+                        </div>
+                    </div>
+
+                    <div class="why-argument" data-aos="fade-up" data-aos-duration="1800" data-aos-once="true">
+                        <div class="why-argument__icon">
+                            <img src="assets/img/icons/why/2.png" alt="">
+                        </div>
+                        <div class="why-argument__text-block">
+                            <h3 class="why-argument__title">Сотрудничаем со многими банками</h3>
+                            <p class="why-argument__text text">Представляем более 100 банковских организаций, поэтому с легкостью подберем для вас идеального партнера из списка МинФина;</p>
+                        </div>
+                    </div>
+
+                    <div class="why-argument" data-aos="fade-up" data-aos-duration="2000" data-aos-once="true">
+                        <div class="why-argument__icon">
+                            <img src="assets/img/icons/why/3.png" alt="">
+                        </div>
+                        <div class="why-argument__text-block">
+                            <h3 class="why-argument__title">Имеем большой опыт</h3>
+                            <p class="why-argument__text text">Хорошо знаем стоп-факторы банков, умеем их обходить, 
+                                а значит получаем одобрение 
+                                от банковских организаций 
+                                в 99% случаев</p>
+                        </div>
+                    </div>
+
+                    <div class="why-argument" data-aos="fade-up" data-aos-duration="2200" data-aos-once="true">
+                        <div class="why-argument__icon">
+                            <img src="assets/img/icons/why/4.png" alt="">
+                        </div>
+                        <div class="why-argument__text-block">
+                            <h3 class="why-argument__title">Предлагаем выгодные условия</h3>
+                            <p class="why-argument__text text">Не обещаем клиентам золотые горы и сразу указываем реальные тарифные ставки;</p>
+                        </div>
+                    </div>
+
+                    <div class="why-argument" data-aos="fade-up" data-aos-duration="2400" data-aos-once="true">
+                        <div class="why-argument__icon">
+                            <img src="assets/img/icons/why/5.png" alt="">
+                        </div>
+                        <div class="why-argument__text-block">
+                            <h3 class="why-argument__title">Помогаем клиентам по всей России</h3>
+                            <p class="why-argument__text text">Для того, чтобы начать сотрудничество, достаточно выслать документы и оговорить нюансы в онлайн-режиме. Наши банки-партнеры находятся 
+                                во многих городах страны.</p>
+                        </div>
+                    </div>
+
+                    <div class="why-argument" data-aos="fade-up" data-aos-duration="2600" data-aos-once="true">
+                        <div class="why-argument__icon">
+                            <img src="assets/img/icons/why/6.png" alt="">
+                        </div>
+                        <div class="why-argument__text-block">
+                            <h3 class="why-argument__title">Беремся за самые нестандартные случаи</h3>
+                            <p class="why-argument__text text">Не боимся прошлых отказов, используем банковские методики оценки клиентов, умеем читать финансовые документы заказчика и выделять в них важное!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--s-why: Адаптирован-->
+
+        <!--s-find-solution: Адаптирован-->
+        <section class="section s-find-solution">
+            <div class="section__inner">
+                <h2 class="title">Найдем решение в самых сложных ситуациях!</h2>
+                <h3 class="subtitle"><span>Получим для вас банковские гарантии, даже если:</span></h3>
+
+                <div class="problems">
+                    <div class="problem " data-aos="fade-left" data-aos-duration="1600" data-aos-once="true">
+                        <div class="problem__img-block">
+                            <div class="problem__img-wrap">
+                                <img src="assets/img/icons/find-solution/1.png" alt="">    
+                            </div>
+                        </div>
+                        <p class="text problem__text">Организация в плохом финансовом состоянии</p>
+                    </div>
+
+                    <div class="problem" data-aos="fade-left" data-aos-duration="1800" data-aos-once="true">
+                        <div class="problem__img-block">
+                            <div class="problem__img-wrap">
+                                <img src="assets/img/icons/find-solution/2.png" alt="">    
+                            </div>
+                        </div>
+                        <p class="text problem__text">Нет достаточного опыта исполнения контрактов</p>
+                    </div>
+
+
+                    <div class="problem" data-aos="fade-left" data-aos-duration="2000" data-aos-once="true">
+                        <div class="problem__img-block">
+                            <div class="problem__img-wrap">
+                                <img src="assets/img/icons/find-solution/3.png" alt="">    
+                            </div>
+                        </div>
+                        <p class="text problem__text">Есть проблемы при проверке службой безопасности банка</p>
+                    </div>
+
+                    <div class="problem" data-aos="fade-left" data-aos-duration="2200" data-aos-once="true">
+                        <div class="problem__img-block">
+                            <div class="problem__img-wrap">
+                                <img src="assets/img/icons/find-solution/4.png" alt="">    
+                            </div>
+                        </div>
+                        <p class="text problem__text">Большое количество <br />судебных дел</p>
+                    </div>
+                    
+                </div>
+                <p class="s-find-solution__slogan">Совершенно БЕСПЛАТНО найдем банк, который предоставит банковскую гарантию! </p>
+            </div>
+        </section>
+        <!--s-find-solution: Адаптирован-->
+        <!--s-feedback: Адаптирован-->
+        <section class="section s-feedback">
+            <div class="section__inner">
+                <h2 class="title">Оставьте заявку прямо сейчас!</h2>
+
+                <div class="feedback-block">
+                    <div class="feedback-form-block" data-aos="fade-right" data-aos-duration="1600" data-aos-once="true">
+                        <h3 class="subtitle">Укажите данные для связи и  мы перезвоним вам через 10 минут! </h3>
+
+                        <form action="post" name="fb_form" class="fb_form">
+                            <div class="input-outer-wrap">
+                                <div class="input-inner-wrap">
+                                    <input type="text" class="input" name="name" id="fb-name" placeholder="Ваше имя" required>
+                                </div>
+                            </div>
+
+                            <div class="input-outer-wrap">
+                                <div class="input-inner-wrap">
+                                    <input type="tel" class="input" name="tel" id="fb-tel" placeholder="Ваш номер телефона" required>
+                                </div>
+                            </div>
+
+                            <div class="form-btn-wrap">
+                                <button class="form-btn">Оформить</button>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="feedback-img-block" data-aos="fade-left" data-aos-duration="1600" data-aos-once="true">
+                        <div class="feedback-img">
+                            <img src="assets/img/feedback-img.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--s-feedback: Адаптирован-->
+
+        <!--s-steps: Адаптирован-->
+        <section class="section s-steps">
+            <div class="s-steps__decoration-1"></div>
+            <div class="s-steps__decoration-2"></div>
+            <div class="section__inner">
+                <h2 class="title">Всего несколько шагов и вы станете обладателем <br />банковской гарантии! </h2>
+
+
+                <ul class="steps-list">
+                    <li class="steps-list__item" data-aos="fade-left" data-aos-duration="1600" data-aos-once="true" data-aos-delay="0"><span class="steps-list__num" >1</span> Оставьте заявку на сайте или нажмите кнопку «Перезвоните мне» в шапке профиля</li>
+                    <li class="steps-list__item" data-aos="fade-left" data-aos-duration="1600" data-aos-once="true" data-aos-delay="100"><span class="steps-list__num" >2</span> Расскажите о проекте, который требует гарантии, и озвучьте свои пожелания</li>
+                    <li class="steps-list__item" data-aos="fade-left" data-aos-duration="1600" data-aos-once="true" data-aos-delay="200"><span class="steps-list__num" >3</span> Получите на почту список документов, необходимых для получения гарантий</li>
+                    <li class="steps-list__item" data-aos="fade-left" data-aos-duration="1600" data-aos-once="true" data-aos-delay="300"><span class="steps-list__num" >4</span> Подготовьте и отправьте документы Вашей организации нам. Специалисты заполнят анкеты и сделают все возможное, чтобы вы смогли получить гарантию на самых лучших условиях</li>
+                    <li class="steps-list__item" data-aos="fade-left" data-aos-duration="1600" data-aos-once="true" data-aos-delay="400"><span class="steps-list__num" >5</span> Получите предложение от банка и оплатите счет</li>
+                    <li class="steps-list__item" data-aos="fade-left" data-aos-duration="1600" data-aos-once="true" data-aos-delay="500"><span class="steps-list__num" >6</span> Поздравляем, вы обладатель банковской гарантии! </li>
+                </ul>
+
+
+                <button class="btn-black btn-begin">начать оформление</button>
+            </div>
+        </section>
+        <!--s-steps: Адаптирован-->
+        
+        <!--s-banks: Адаптирован-->
+        <section class="section s-banks" id="banks">
+            <div class="section__inner">
+                <h2 class="title">Поможем получить гарантии в надежных банках </h2>
+
+                <div class="swiper banks-carousel">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <img src="assets/img/banks/gazprombank.png" alt="" class="bank-logo">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="assets/img/banks/raifaizenbank.png" alt="" class="bank-logo">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="assets/img/banks/rosbank.jpg" alt="" class="bank-logo">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="assets/img/banks/sber.jpg" alt="" class="bank-logo">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="assets/img/banks/sovcombank.png" alt="" class="bank-logo">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="assets/img/banks/tinkoff.jpg" alt="" class="bank-logo">
+                        </div>
+
+
+                    </div>
+                    <div class="swiper-button-next swiper-nav">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
+                            <path d="M1.37727273,19.5227273 C1.11368228,19.2591368 1.11368228,18.8317723 1.37727273,18.5681818 L9.94545455,10 L1.37727273,1.43181818 C1.11368228,1.16822773 1.11368228,0.740863176 1.37727273,0.477272727 C1.64086318,0.213682278 2.06822773,0.213682278 2.33181818,0.477272727 L11.1474387,9.29289322 C11.537963,9.68341751 11.537963,10.3165825 11.1474387,10.7071068 L2.33181818,19.5227273 C2.06822773,19.7863177 1.64086318,19.7863177 1.37727273,19.5227273 Z" transform="translate(4)"/>
+                        </svg>
+                    </div>
+                    <div class="swiper-button-prev swiper-nav">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
+                            <path d="M10.4772727,0.477272727 C10.7408632,0.740863176 10.7408632,1.16822773 10.4772727,1.43181818 L1.90909091,10 L10.4772727,18.5681818 C10.7408632,18.8317723 10.7408632,19.2591368 10.4772727,19.5227273 C10.2136823,19.7863177 9.78631772,19.7863177 9.52272727,19.5227273 L0.707106781,10.7071068 C0.316582489,10.3165825 0.316582489,9.68341751 0.707106781,9.29289322 L9.52272727,0.477272727 C9.78631772,0.213682278 10.2136823,0.213682278 10.4772727,0.477272727 Z" transform="translate(4)"/>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--s-banks: Адаптирован-->
+
+        <!--s-reviews: Адаптирован-->
+        <section class="section s-reviews">
+            <div class="section__inner">
+                <h2 class="title">Что говорят о нас клиенты?</h2>
+                <h3 class="subtitle">РосБрокер – надежный и ответственный партнер. <br />
+                    Это подтверждают отзывы наших благодарных клиентов! </h3>
+
+
+                <div class="reviews swiper" >
+                    <div class="swiper-wrapper">
+                        <div class="review swiper-slide">
+                            <p class="text text-italic">
+                                Пришли к команде «Росброкер» по рекомендации партнера и уже более 3 лет рады иметь такого посредника в сфере получения банковских гарантий! Спасибо за качественное предоставление услуг, оперативность и прозрачность сотрудничества! Надеемся 
+                                на дальнейшее плодотворное сотрудничество! 
+                            </p>
+                            <div class="review__author">
+                                <div class="review__author-photo">
+                                    <img src="assets/img/reviews/1.jpg" alt="">
+                                </div>
+                                <div class="review__author-tblock">
+                                    <p class="review__author-name">Иванов Иван</p>
+                                    <p class="review__author-company">Компания</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="review swiper-slide">
+                            <p class="text text-italic">
+                                Пришли к команде «Росброкер» по рекомендации партнера и уже более 3 лет рады иметь такого посредника в сфере получения банковских гарантий! Спасибо за качественное предоставление услуг, оперативность и прозрачность сотрудничества! Надеемся 
+                                на дальнейшее плодотворное сотрудничество! 
+                            </p>
+                            <div class="review__author">
+                                <div class="review__author-photo">
+                                    <img src="assets/img/reviews/2.jpg" alt="">
+                                </div>
+                                <div class="review__author-tblock">
+                                    <p class="review__author-name">Иванова Ольга</p>
+                                    <p class="review__author-company">Компания</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="review swiper-slide">
+                            <p class="text text-italic">
+                                Пришли к команде «Росброкер» по рекомендации партнера и уже более 3 лет рады иметь такого посредника в сфере получения банковских гарантий! Спасибо за качественное предоставление услуг, оперативность и прозрачность сотрудничества! Надеемся 
+                                на дальнейшее плодотворное сотрудничество! 
+                            </p>
+                            <div class="review__author">
+                                <div class="review__author-photo">
+                                    <img src="assets/img/reviews/3.jpg" alt="">
+                                </div>
+                                <div class="review__author-tblock">
+                                    <p class="review__author-name">Людмила Козлова</p>
+                                    <p class="review__author-company">Компания</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-button-next swiper-nav reviews-nav">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
+                            <path d="M1.37727273,19.5227273 C1.11368228,19.2591368 1.11368228,18.8317723 1.37727273,18.5681818 L9.94545455,10 L1.37727273,1.43181818 C1.11368228,1.16822773 1.11368228,0.740863176 1.37727273,0.477272727 C1.64086318,0.213682278 2.06822773,0.213682278 2.33181818,0.477272727 L11.1474387,9.29289322 C11.537963,9.68341751 11.537963,10.3165825 11.1474387,10.7071068 L2.33181818,19.5227273 C2.06822773,19.7863177 1.64086318,19.7863177 1.37727273,19.5227273 Z" transform="translate(4)"/>
+                        </svg>
+                    </div>
+                    <div class="swiper-button-prev swiper-nav reviews-nav">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
+                            <path d="M10.4772727,0.477272727 C10.7408632,0.740863176 10.7408632,1.16822773 10.4772727,1.43181818 L1.90909091,10 L10.4772727,18.5681818 C10.7408632,18.8317723 10.7408632,19.2591368 10.4772727,19.5227273 C10.2136823,19.7863177 9.78631772,19.7863177 9.52272727,19.5227273 L0.707106781,10.7071068 C0.316582489,10.3165825 0.316582489,9.68341751 0.707106781,9.29289322 L9.52272727,0.477272727 C9.78631772,0.213682278 10.2136823,0.213682278 10.4772727,0.477272727 Z" transform="translate(4)"/>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--s-reviews: Адаптирован-->
+        <!--contacts: Адаптирован-->
+        <section class="section contacts">
+            <div class="section__inner">
+                <h2 class="title">Быстро и качественно решим вопросы <br />с получением банковских гарантий! </h2>
+
+
+                <div class="c-block">
+                    <div class="c-list">
+                        <h3 class="small-title">Наши контакты</h3>
+                        
+                        <ul>
+                            <li><i class="icon-phone" aria-hidden="true"></i><a href="tel:+74950035519">+ 7 495 003 55 19</a></li>
+                            <li><i class="icon-mail-alt" aria-hidden="true"></i><a href="mailto:info@rusbrocker.ru">info@rusbrocker.ru</a></li>
+                            <li><i class="icon-location-1" aria-hidden="true"></i><address>МО, г.Химки,Ленинградская ул, 39с5, БП "Химки</address></li>
+                        </ul>
+                        
+                        <a href="#" class="c-list__btn">Связаться с нами в What’s App <img src="assets/img/icons/whatsapp.png" alt=""></a>
+                    </div>
+
+                    <div class="map">
+                        <div class="map__inner">
+                            <div class="map__container">
+                                <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Ac78dcb8070b2294b35e04e92ef851cd49619f37747765790f7540c94f485467b&amp;width=100%&amp;height=100%&amp;lang=ru_RU&amp;scroll=true"></script>
+                            </div>                            
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+        <!--contacts: Адаптирован-->
+    </main>
+    <!--footer: Адаптирован-->
+    <footer class="section footer">
+        <div class="section__inner">
+            <nav class="footer-nav">
+                <ul>
+                    <li><a href="#about" class="d-menu__link">О нас</a></li>
+                    <li><a href="#advantages" class="d-menu__link">Преимущества</a></li>
+                    <li><a href="#banks" class="d-menu__link">Банки</a></li>
+                    <li><a class="f-calc-btn">Рассчитать стоимость</a></li>
+                </ul>
+            </nav>
+
+            <div class="footer-contacts">
+                <h3>Контакты</h3>
+                <ul>
+                    <li><i class="icon-phone" aria-hidden="true"></i><a href="tel:+74950035519">+ 7 495 003 55 19</a></li>
+                    <li><i class="icon-mail-alt" aria-hidden="true"></i><a href="mailto:info@rusbrocker.ru">info@rusbrocker.ru</a></li>
+                    <li><i class="icon-location-1" aria-hidden="true"></i><address>МО, г.Химки,Ленинградская ул, 39с5, БП "Химки</address></li>
+                </ul>
+            </div>
+
+            <div class="footer-social">
+                <h3>Мы в соц. сетях</h3>
+                <div class="footer-social__links">
+                    <a href="#"><i class="icon-facebook"></i></a>
+                    <a href="#"><i class="icon-instagram"></i></a>
+                    <a href="#"><i class="icon-vkontakte"></i></a>
+                </div>
+                
+            </div>
+        </div>
+    </footer>
+    <!--footer: Адаптирован-->
+
+    <!--copyright: Адаптирован-->
+    <section class="section copyright">
+        <div class="section___inner">
+            © 2022 РосБрокер
+        </div>
+    </section>
+    <!--copyright: Адаптирован-->
+
+
+    <div class="modal-cons">
+
+        <h3 class="modal-title">Заполните заявку</h3>
+        <div class="success-msg">
+            <img src="assets/img/successful.png" alt="">
+            <h3>Cпасибо за обращение, ваш запрос уже обрабатывается специалистом</h3>
+        </div>
+        <form action="post" name="consform" class="calcform feed-m">
+            <div class="calcform__item">
+                <div class="calcform__outer-i-wrap">
+                    <label for="cons-name" class="calcform__label">Имя</label>
+                    <div class="calcform__inner-i-wrap">
+                        <input type="text" placeholder="Имя" name="cons-name" id="cons-name" class="calcform__input" required>
+                    </div>
+                </div>
+            </div>
+
+            <div class="calcform__item">
+                <div class="calcform__outer-i-wrap">
+                    <label for="cons-phone" class="calcform__label">Телефон</label>
+                    <div class="calcform__inner-i-wrap">
+                        <input type="tel" placeholder="Телефон" name="cons-phone" id="cons-phone" class="calcform__input" required>
+                    </div>
+                </div>
+            </div>
+
+            <div class="calcform__row">
+                <button class="calcform__btn ">Получить консультацию</button>
+            </div>
+        </form>
+    </div>
+
+
+    <div class="modal-calc">
+        <h3 class="modal-title">Узнайте стоимость банковской гарантии <br />
+            прямо сейчас!</h3>
+
+        <div class="success-msg">
+            <img src="assets/img/successful.png" alt="">
+            <h3>Cпасибо за обращение, ваш запрос уже обрабатывается специалистом</h3>
+        </div>
+        <form action="post" name="calcform" class="calcform calcform-m">
+            <div class="calcform__item">
+                <div class="calcform__outer-i-wrap">
+                    <label for="cf-name-m" class="calcform__label">Имя</label>
+                    <div class="calcform__inner-i-wrap">
+                        <input type="text" placeholder="Имя" name="name" id="cf-name-m" class="calcform__input" required>
+                    </div>
+                </div>
+            </div>
+
+            <div class="calcform__item">
+                <div class="calcform__outer-i-wrap">
+                    <label for="cf-phone-m" class="calcform__label">Телефон</label>
+                    <div class="calcform__inner-i-wrap">
+                        <input type="tel" placeholder="Телефон" name="phone" id="cf-phone-m" class="calcform__input" required>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="calcform__item">
+                <div class="calcform__outer-i-wrap">
+                    <label for="cf-email-m" class="calcform__label">Электронная почта</label>
+                    <div class="calcform__inner-i-wrap">
+                        <input type="email" placeholder="Электронная почта" name="email" id="cf-email-m" class="calcform__input" required>
+                    </div>
+                </div>
+            </div>
+
+            <div class="calcform__item">
+                <div class="calcform__outer-i-wrap">
+                    <label for="cf-guarantee-m" class="calcform__label">Вид банковской гарантии</label>
+                    <div class="calcform__inner-i-wrap">
+                        <select name="cf-guarantee" id="cf-guarantee-m" class="calcform__input" required>
+                            <option value=""></option>
+                            <option value="Гарантия 1">Гарантия 1</option>
+                            <option value="Гарантия 2">Гарантия 2</option>
+                            <option value="Гарантия 3">Гарантия 3</option>
+                            <option value="Гарантия 4">Гарантия 4</option>
+
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <div class="calcform__item">
+                <div class="calcform__outer-i-wrap">
+                    <label for="cf-contract-m" class="calcform__label">Вид контракта</label>
+                    <div class="calcform__inner-i-wrap">
+                        <select name="cf-contract" id="cf-contract-m" class="calcform__input" required>
+                            <option value=""></option>
+                            <option value="Вид контракта 1">Вид контракта 1</option>
+                            <option value="Вид контракта 2">Вид контракта 2</option>
+                            <option value="Вид контракта 3">Вид контракта 3</option>
+                            <option value="Вид контракта 4">Вид контракта 4</option>
+
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="calcform__item">
+                <div class="calcform__outer-i-wrap">
+                    <label for="cf-date-m" class="calcform__label">Срок гарантии</label>
+                    <div class="calcform__inner-i-wrap">
+                        <input type="date" placeholder="Срок гарантии" name="cf-date" id="cf-date-m" class="calcform__input" required>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="calcform__row">
+                <div class="calcform__outer-i-wrap">
+                    <label for="cf-summ-m" class="calcform__label">Сумма</label>
+                    <div class="calcform__inner-i-wrap">
+                        <input type="text" placeholder="Сумма" name="cf-summ" id="cf-summ-m" class="calcform__input" required>
+                    </div>
+                </div>
+            </div>
+
+            <div class="calcform__row">
+                <button class="calcform__btn">Расcчитать</button>
+            </div>
+        </form>
+    </div>
+
+
+    <div class="mob-menu">
+        <div class="h-form-decoration"></div>
+
+
+        <nav class="mob-nav">
+            <a href="#about" class="mob-menu-link">О нас</a>
+            <a href="#advantages" class="mob-menu-link">Преимущества</a>
+            <a href="#banks" class="mob-menu-link">Банки</a>
+        </nav>
+
+
+        <div class="mob-contacts">
+            <ul>
+                <li><i class="icon-phone" aria-hidden="true"></i><a href="tel:+74950035519">+ 7 495 003 55 19</a></li>
+                <li><i class="icon-mail-alt" aria-hidden="true"></i><a href="mailto:info@rusbrocker.ru">info@rusbrocker.ru</a></li>
+            </ul>
+            <button class="mob-call-me">Перезвоните мне</button>
+        </div>
+    </div>
+
+
+    <div class="modal-success">
+        <img src="assets/img/successful.png" alt="">
+        <h3>Cпасибо за обращение, ваш запрос уже обрабатывается специалистом</h3>
+    </div>
+
+
+
+
+    <script src="assets/js/swiper-bundle.min.js"></script>
+    <script src="assets/js/easyModal.js"></script>
+
+    <script src="assets/js/imask.js"></script>
+    <script src="assets/js/aos.js"></script>
     <script src="assets/js/main.js"></script>
     
 </body>
