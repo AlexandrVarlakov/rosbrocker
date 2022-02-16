@@ -2141,6 +2141,7 @@ form[name='fb_form']{
 	background-color: #fff;
 	position: relative;
 	min-height: 280px;
+	display: none;
 	@media (max-width: 420px){
 		width: calc(100% - 20px);
 	}

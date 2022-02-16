@@ -2629,7 +2629,8 @@ form[name='fb_form'] {
   height: 80vh;
   background-color: #fff;
   position: relative;
-  min-height: 280px; }
+  min-height: 280px;
+  display: none; }
   @media (max-width: 420px) {
     .modal-banks {
       width: calc(100% - 20px); } }
