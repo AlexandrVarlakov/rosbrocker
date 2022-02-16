@@ -6,7 +6,7 @@ let banks = new Swiper(".banks-carousel", {
         delay: 2000,
     },
     slidesPerView: 4,
-    spaceBetween: 20,
+    spaceBetween: 50,
     loop: true,
     navigation: {
         nextEl: ".swiper-button-next",
@@ -17,21 +17,21 @@ let banks = new Swiper(".banks-carousel", {
         // when window width is >= 320px
         320: {
           slidesPerView: 1,
-          spaceBetween: 20
+          spaceBetween: 40
         },
         480: {
             slidesPerView: 2,
-            spaceBetween: 20
+            spaceBetween: 40
           },
         // when window width is >= 480px
         768: {
           slidesPerView: 3,
-          spaceBetween: 20
+          spaceBetween: 40
         },
         // when window width is >= 640px
         1140: {
           slidesPerView: 4,
-          spaceBetween: 20
+          spaceBetween: 50
         }
       }
   });
@@ -84,7 +84,7 @@ let options2 = {
   displayModal: 'flex', //Значение по умолчанию block
   showModalAnimationName: 'fadeInBottom', 
   closeModalAnimationName: 'fadeOutTop', 
-  closeClasses: ['close-modal'], 
+  closeClasses: ['close-modal', 'modal-close'], 
   //closeModalOnFogClick: false, 
   showModalAnimationDuration: 800,
   //closeModalAnimationDuration: 300,
@@ -493,5 +493,71 @@ var numberMask = IMask(
 
 
 
+let showBanksListBtn = document.querySelector('.all-banks-btn');
 
+showBanksListBtn.onclick = function(event){
+  let modalBanks =  new easyModal('modal-banks', options2);
+}
+
+let search = document.querySelector('.search');
+
+search.oninput = function(e){
+  let results = 0;
+
+  let btn = this.nextElementSibling;
+  if (this.value.length > 0) {
+    btn.classList.add('typed');    
+  } else{
+    btn.classList.add('remove');    
+  }
+
+
+
+  let searchValue = this.value;
+  let banksList = document.querySelectorAll('.modal-banks__item');
+  if (searchValue.length > 0 ){
+    banksList.forEach( (bank) => {
+      let dataFind = bank.getAttribute('data-find');
+      let reg = new RegExp(searchValue, "gi");
+      if ( reg.test(dataFind) ) {
+        bank.style.display = "block";
+        results++;
+      } else{
+        bank.style.display = "none";
+      }
+    } )
+  } else {
+    results = -1;
+    banksList.forEach( (bank) => {
+      bank.style.display = "block";
+    })
+  }
+  
+  if ( results === 0 ){
     
+
+    let modalParent = this.closest('.modal-banks');
+    modalParent.querySelector('.modal-banks__list').classList.add('search-not-results');
+  } else{
+    let modalParent = this.closest('.modal-banks');
+    modalParent.querySelector('.modal-banks__list').classList.remove('search-not-results');
+  }
+
+
+}
+
+let searchBtn = document.querySelector('.search-btn');
+searchBtn.onclick = function(e){
+  if (this.classList.contains('typed')){
+    this.classList.remove('typed');
+    let input = this.previousElementSibling;
+    input.value = "";
+    input.focus();
+    let modalParent = this.closest('.modal-banks');
+    modalParent.querySelector('.modal-banks__list').classList.remove('search-not-results');
+    let banksList = document.querySelectorAll('.modal-banks__item');
+    banksList.forEach( (bank) => {
+      bank.style.display = "block";
+    })
+  }
+}
