@@ -508,7 +508,7 @@ search.oninput = function(e){
   if (this.value.length > 0) {
     btn.classList.add('typed');    
   } else{
-    btn.classList.add('remove');    
+    btn.classList.remove('typed');    
   }
 
 
@@ -527,9 +527,10 @@ search.oninput = function(e){
       }
     } )
   } else {
-    results = -1;
-    banksList.forEach( (bank) => {
+      results = -1;
+      banksList.forEach( (bank) => {
       bank.style.display = "block";
+      
     })
   }
   
